@@ -6,5 +6,11 @@
       $result=mysqli_query($conexion,$sql);
       return mysqli_fetch_all($result,MYSQLI_ASSOC);
     }
+    public function insertarDatosNombre($datos){
+      $c=new conectar();
+      $conexion=$c->conexion();
+      $sql="INSERT into t_persona (nombre,apellido) values ('$datos[0]','$datos[1]')";
+      return $result=mysqli_query($conexion,$sql);
+    }
   }
 ?>
