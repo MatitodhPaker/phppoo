@@ -11,6 +11,6 @@
   if ($obj->actualizarDatosNombre($datos)==1) {
     header("location:../index.php");
   }else {
-    echo "fallo al agregar";
+    echo "fallo al actualizar";
   }
 ?>
