@@ -12,5 +12,11 @@
       $sql="INSERT into t_persona (nombre,apellido) values ('$datos[0]','$datos[1]')";
       return $result=mysqli_query($conexion,$sql);
     }
+    public function actualizarDatosNombre($datos){
+      $c=new conectar();
+      $conexion=$c->conexion();
+      $sql="UPDATE t_persona set nombre='$datos[0]', apellido='$datos[1]' where id='$datos[2]'";
+      return $result=mysqli_query($conexion,$sql);
+    }
   }
 ?>

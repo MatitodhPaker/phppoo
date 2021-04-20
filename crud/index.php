@@ -26,6 +26,7 @@
     <tr>
       <td>Nombre</td>
       <td>Apellido</td>
+      <td>Actualizar</td>
     </tr>
     <?php
       $obj= new metodos();
@@ -36,6 +37,9 @@
     <tr>
       <td><?php echo $key['nombre']?></td>
       <td><?php echo $key['apellido']?></td>
+      <td>
+        <a href="editar.php?id=<?php echo $key['id']?>">editar</a>
+      </td>
     </tr>
     <?php
       }
